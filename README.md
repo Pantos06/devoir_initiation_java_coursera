@@ -1,4 +1,4 @@
-devoir_initiation_java_coursera
+﻿devoir_initiation_java_coursera
 ===============================
 
-Devoir de certification au cours "Initiation à Java" sur Coursera
+Dévoir de certification au cours "Initiation à Java" sur Coursera
