@@ -25,59 +25,53 @@ class TrancheMax {
         	System.exit(0);
         }else{
         	
-        	String regex = "((\\s*)((0|1)*))+"; //regex pour la forme de la matrice
+        String regex = "((\\s*)((0|1)*))+"; //regex pour la forme de la matrice
             
-            if(matrice.matches(regex)){
-            	
-            	matrice = matrice.trim();
-            	
+        if(matrice.matches(regex)){
+        	
+            	matrice = matrice.trim(); // on efface tous les vides au début et à la fin
             	String[] lignes = matrice.split(" {1,}");
-                	
             	int longeurLigne = lignes[0].length();
-                boolean longeurValide = true;	
+    
                 // Test de longueur valide
             	for (int i = 1; i < lignes.length; i++) {
             		
             		if(lignes[i].length() != longeurLigne){
             			System.out.println("Matrice invalide, lignes de longueurs differentes!");
-            			longeurValide = false;
             			System.exit(0);
             		}
             	}
-            	if(longeurValide){
-            		int max = 2;
-            		ArrayList<Integer> lst = new ArrayList<>();
+            
+            	int max = 2;
+            	ArrayList<Integer> lst = new ArrayList<>();
             		
-            		for (int i = 0; i < lignes.length; i++) {
+            	for (int i = 0; i < lignes.length; i++) {
             			
-            			int j = longeurLigne;
-            			lst.add(i, 0);
-						while (j>=max) {
+            		int j = longeurLigne;
+            		lst.add(i, 0);
+			while (j>=max) {
 							
-							String reg = "(.*)(1{"+j+"})(.*)";
-							if(lignes[i].matches(reg)){
-								max = j;
-								lst.add(i, j);
-								break;
-							}
-							j-=1;
-						}
-						
-					}
-            		for (int i = 0; i < lst.size(); i++) {
-						if(lst.get(i)>=max){
-							maxConsecutifList.add(i);
-						}
-					}
-            	}
+				String reg = "(.*)(1{"+j+"})(.*)"; // suite de 1
+				if(lignes[i].matches(reg)){
+				max = j;
+				lst.add(i, j);
+				break;
+				}
+				j-=1;
+			}
+		}
+            	for (int i = 0; i < lst.size(); i++) {
+			if(lst.get(i)>=max){
+				maxConsecutifList.add(i);
+			}
+		}
             	
-            }else{
+        }else{
             	System.out.println("Matrice invalide, seulement '1' , '0' et ' ' admis!");
             	System.exit(0);
             }
         }
         
-
         /*******************************************
          * Ne rien modifier apres cette ligne.
          *******************************************/
