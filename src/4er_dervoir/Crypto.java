@@ -25,23 +25,20 @@ public class Crypto {
         	char c = s.charAt(i);
         	if(c== ' '){
         		aCoder +=" ";
-        		
         	}else if(ALPHABET.contains(c+"")){
 				aCoder += c;
 			}
-		}
+	}
         
         for (int i = 0; i < aCoder.length(); i++) {
         	char c2 = aCoder.charAt(i);
         	if(c2 == ' '){
         		chaineCodee += " ";
         	}else{
-        		
         		int d = (ALPHABET.indexOf(c2)+DECALAGE) % 26;
         		chaineCodee += ALPHABET.charAt(d);
-        		
         	}
-		}
+	}
         
         /*******************************************
          * Ne rien modifier apres cette ligne.
