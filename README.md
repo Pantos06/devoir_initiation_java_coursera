@@ -3,4 +3,4 @@
 
 Dévoir de certification au cours "Initiation à Java" sur Coursera
 
-NB: J'ai eu note sur note sur tous ces dévoir.
+NB: Le compilateur de Coursera a noté correct tous ces dévoir.
