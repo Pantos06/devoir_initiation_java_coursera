@@ -12,18 +12,18 @@ class MostFrequent {
         int freqMax = 0;
         for (int i = 0; i < taille; i++) {
         	int freq = 1;
-			for (int j = i+1; j < taille; j++) {
+		for (int j = i+1; j < taille; j++) {
 				
-				if(tab1[i] == tab1[j]){
-					freq += 1;
-				}
-			}
-			
-			if(freq > freqMax){
-				freqMax = freq;
-				most = tab1[i];
+			if(tab1[i] == tab1[j]){
+				freq += 1;
 			}
 		}
+			
+		if(freq > freqMax){
+			freqMax = freq;
+			most = tab1[i];
+		}
+	}
         System.out.print("Le nombre le plus frequent dans le tableau est le :\n");
         System.out.println(most+" ("+freqMax+" x)");
         /*******************************************
