@@ -22,7 +22,7 @@ public class Population {
 
         // ===== PARTIE 1 =====
         do{
-        	System.out.print("Quelle année (> 2011) ? ");
+        	System.out.print("Quelle annÃ©e (> 2011) ? ");
             anneeCourante = keyb.nextInt();
             
         }while(anneeCourante<=anneeInitiale);
@@ -33,20 +33,15 @@ public class Population {
         // ===== PARTIE 2 =====
         System.out.println("\n====---- PARTIE 2 ----====");
         
-        anneeCourante = anneeInitiale;
-        populationCourante = populationInitiale;
+        anneeCourante = anneeInitiale; // initialisation anneeCourante
+        populationCourante = populationInitiale; // initialisation populationCourante
         
         double populationCible = populationInitiale;
         
-        while(populationCible<=populationInitiale){
-        	System.out.print("Combien de milliards (> 7.0) ? ");
-        	populationCible = keyb.nextDouble();
-        }
-        /*do{
-        	
-        	
-        	
-        }while(populationCible<=populationInitiale);*/
+        do{
+            System.out.print("Combien de milliards (> 7.0) ? ");
+        	populationCible = keyb.nextDouble();	
+        }while(populationCible<=populationInitiale);
         
         while(populationCourante<=populationCible){
         	
@@ -59,8 +54,8 @@ public class Population {
         System.out.println("\n====---- PARTIE 3 ----====");
         
         DecimalFormat df2 = new DecimalFormat("#0.0");
-        anneeCourante = anneeInitiale;
-        populationCourante = populationInitiale;
+        anneeCourante = anneeInitiale; // initialisation anneeCourante
+        populationCourante = populationInitiale; // initialisation populationCourante
         
         int aux = (int) populationInitiale;
         
