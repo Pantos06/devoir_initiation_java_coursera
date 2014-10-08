@@ -53,9 +53,9 @@ class TrancheMax {
 							
 				String reg = "(.*)(1{"+j+"})(.*)"; // suite de 1
 				if(lignes[i].matches(reg)){
-				max = j;
-				lst.add(i, j);
-				break;
+					max = j;
+					lst.add(i, j);
+					break;
 				}
 				j-=1;
 			}
